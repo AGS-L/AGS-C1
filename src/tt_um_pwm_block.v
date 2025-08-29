@@ -17,7 +17,7 @@ module tt_um_pwm_block (
 );
 
   assign uio_oe = 8'b00101111; // set data directions
-  assign uio_out[4:0] = 5'b0_zzzz; // all unused outputs are assigned
+  assign uio_out[4:0] = 5'b00000; // all unused outputs are assigned
   assign uio_out[7:6] = 2'b00;
   assign uo_out[7:3] = 5'b00000;
 
