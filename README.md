@@ -1,3 +1,6 @@
+![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
+
+
 # PWM Controller with Serial Peripheral Interface
 
 This repository contains the design files and documentation for a **PWM Controller Chip** developed at the **Adaptive Heterogeneous Systems Laboratory**.  
