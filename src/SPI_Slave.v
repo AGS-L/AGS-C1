@@ -176,7 +176,7 @@ module SPI_Slave
   begin
     if (~i_Rst_L)
     begin
-      r_TX_Byte = 8'h00;
+      r_TX_Byte <= 8'h00;
     end
     else
     begin

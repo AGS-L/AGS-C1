@@ -1,41 +1,43 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
+# PWM Controller with Serial Peripheral Interface
 
-# Tiny Tapeout Verilog Project Template
+This repository contains the design files and documentation for a **PWM Controller Chip** developed at the **Adaptive Heterogeneous Systems Laboratory**.  
+The chip is designed to provide flexible pulse-width modulation (PWM) generation with an easy-to-use serial peripheral interface, enabling seamless integration with microcontrollers for embedded systems applications.
 
-- [Read the documentation for project](docs/info.md)
+---
 
-## What is Tiny Tapeout?
+## Features
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
+- **Pulse-Width Modulation (PWM) Generation**
+  - Supports configurable duty cycle and frequency.
+  - Multiple PWM channels (number depends on configuration).
+  - Resolution and timing precision optimized for embedded control.
 
-To learn more and get started, visit https://tinytapeout.com.
+- **Serial Interface**
+  - Simple serial protocol for configuration and control.
+  - Compatible with common microcontrollers and SoCs.
+  - Low-pin count interface for minimal I/O usage.
 
-## Set up your Verilog project
+- **Scalable Design**
+  - Can be used in standalone mode or as part of larger heterogeneous systems.
+---
 
-1. Add your Verilog files to the `src` folder.
-2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
-3. Edit [docs/info.md](docs/info.md) and add a description of your project.
-4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
+## Applications
 
-The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+- Motor control (DC, BLDC, stepper).
+- LED dimming and brightness control.
+- Power converters and switching regulators.
+- Embedded control systems requiring flexible PWM generation.
 
-## Enable GitHub actions to build the results page
+---
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+## Block Diagram
 
-## Resources
+TBA
 
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-- [Build your design locally](https://www.tinytapeout.com/guides/local-hardening/)
+---
 
-## What next?
+## Authors
 
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
+Matthew Allen Monugian , John Biselx, Anwar Muhammed, Andrea Guerrieri
+
+ 
