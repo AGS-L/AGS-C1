@@ -69,8 +69,8 @@ reg [31:0] prescaler2;
   always @(negedge reset_n or posedge clk) begin
     if(reset_n == 1'b0) begin
       pwm_out[0] <= 1'b0;
-      counter0 <= 0;
-      prescaler0 <= 0;
+      counter0 <= 32'd0;
+      prescaler0 <= 32'd0;
     end else begin
       if((enable == 1'b1)) begin
         if((prescaler0 >= (prescaler))) begin
@@ -103,8 +103,8 @@ reg [31:0] prescaler2;
   always @(negedge reset_n or posedge clk) begin
     if((reset_n == 1'b0)) begin
       pwm_out[1] <= 1'b0;
-      counter1 <= 0;
-      prescaler1 <= 1'b0;
+      counter1 <= 32'd0;
+      prescaler1 <= 32'd0;
     end else begin
       if((enable == 1'b1)) begin
         if((prescaler1 >= (prescaler))) begin
@@ -137,8 +137,8 @@ reg [31:0] prescaler2;
   always @(negedge reset_n or posedge clk) begin
     if((reset_n == 1'b0)) begin
       pwm_out[2] <= 1'b0;
-      counter2 <= 0;
-      prescaler2 <= 0;
+      counter2 <= 32'd0;
+      prescaler2 <= 32'd0;
     end else begin
       if((enable == 1'b1)) begin
         if((prescaler2 >= (prescaler))) begin
