@@ -11,6 +11,8 @@ from cocotb.result import TestFailure
 async def test_send_multiple_payloads(dut):
     clk = dut.clk
 
+    dut.ui_in.value = 0b11111111
+
     # Start the clock if not driven externally
     cocotb.start_soon(Clock(clk, 10, units="ns").start())  # Adjust clock period as needed
 
