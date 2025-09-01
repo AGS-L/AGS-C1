@@ -41,7 +41,6 @@ module SPI_Slave
 
 
   // SPI Interface (All Runs at SPI Clock Domain)
-  wire w_CPOL;     // Clock polarity
   wire w_CPHA;     // Clock phase
   wire w_SPI_Clk;  // Inverted/non-inverted depending on settings
   wire w_SPI_MISO_Mux;
@@ -57,7 +56,6 @@ module SPI_Slave
   // CPOL: Clock Polarity
   // CPOL=0 means clock idles at 0, leading edge is rising edge.
   // CPOL=1 means clock idles at 1, leading edge is falling edge.
-  assign w_CPOL  = (SPI_MODE == 2) | (SPI_MODE == 3);
 
   // CPHA: Clock Phase
   // CPHA=0 means the "out" side changes the data on trailing edge of clock
