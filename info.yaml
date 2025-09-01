@@ -19,7 +19,7 @@ project:
   source_files:
     - "tt_um_pwm_block.v"
     - "pwm.v"
-    - "MemoryManager.v"
+    - "RegisterFiles.v"
     - "SPI_Slave.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
