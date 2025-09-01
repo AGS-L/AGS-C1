@@ -42,6 +42,8 @@ async def test_send_multiple_payloads(dut):
 
     for _ in range(5000):
         await RisingEdge(clk)
+
+    dut.ui_in.value = 0b00000000
         
     for payload, delay in zip(payloads, delays):
         for _ in range(delay):
