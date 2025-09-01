@@ -38,6 +38,8 @@ async def test_send_multiple_payloads(dut):
     delays = [200, 200, 200, 200, 1000]  # Delay after each payload
 
     for payload, delay in zip(payloads, delays):
+        for _ in range(delay):
+            await RisingEdge(clk)
         await send_multi_byte(dut, payload, len(payload))
         for _ in range(delay):
             await RisingEdge(clk)
