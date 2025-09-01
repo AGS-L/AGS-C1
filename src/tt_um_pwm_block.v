@@ -17,7 +17,7 @@ module tt_um_pwm_block (
 );
 
   assign uio_oe = 8'b00101111; // set data directions
-  assign uio_out[4:0] = 5'b00000; // all unused outputs are assigned
+  assign uio_out[4:1] = 4'b0000; // all unused outputs are assigned
   assign uio_out[7:6] = 2'b00;
   assign uo_out[7:3] = 5'b00000;
 
@@ -81,7 +81,21 @@ wire tx_dv;
             uo_out[2:0]
   );
 
+    reg reg_ui0, reg_ui1;
+    always @(posedge clk or negedge rst_n) begin
+        if(~rst_n) begin
+            reg_ui0 <= 1'b0;
+            reg_ui1 <= 1'b0;
+        end
+        else begin
+            reg_ui0 <= ui_in[0];
+            reg_ui1 <= ui_in[1];
+        end
+    end
+    
+    assign uio_out = reg_ui1 ? 1'bz : reg_ui0;
+
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, ui_in, uio_in[3:0], uio_in[5], 1'b0};
+    wire _unused = &{ena, ui_in[7:2], uio_in[3:0], uio_in[5], 1'b0};
 
 endmodule
