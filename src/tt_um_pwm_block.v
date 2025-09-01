@@ -93,7 +93,7 @@ wire tx_dv;
         end
     end
     
-    assign uio_out = reg_ui1 ? 1'bz : reg_ui0;
+    assign uio_out[0] = reg_ui1 ? 1'bz : reg_ui0;
 
   // List all unused inputs to prevent warnings
     wire _unused = &{ena, ui_in[7:2], uio_in[3:0], uio_in[5], 1'b0};
