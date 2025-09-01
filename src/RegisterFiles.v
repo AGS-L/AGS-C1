@@ -14,7 +14,7 @@ output reg [3 - 1:0] pwm_out
 
 */
 
-module MemoryManager(
+module RegisterFiles(
     input wire        i_Rst_L,    // Reset, active low
     input wire        i_Clk,      // Clock
 
