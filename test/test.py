@@ -36,14 +36,16 @@ async def test_send_multiple_payloads(dut):
         [0x07],
     ]
 
-    delays = [200, 200, 200, 200, 1000]  # Delay after each payload
+    delays = [200, 200, 200, 200,200, 1000]  # Delay after each payload
 
+    for _ in range(200):
+        await RisingEdge(clk)
+        
     for payload, delay in zip(payloads, delays):
         for _ in range(delay):
             await RisingEdge(clk)
         await send_multi_byte(dut, payload, len(payload))
-        for _ in range(delay):
-            await RisingEdge(clk)
+    
 
     # Simulation done
     dut._log.info("Test completed. Finishing simulation.")
