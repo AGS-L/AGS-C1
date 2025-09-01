@@ -17,7 +17,8 @@ module tt_um_pwm_block (
 );
 
     assign uio_oe = 8'b00101111; // set data directions
-    assign uio_out[4:1] = 4'b0000; // all unused outputs are assigned
+    assign uio_out[2:1] = 2'b00; // all unused outputs are assigned
+    assign uio_out[4] = 1'b0;
     assign uio_out[7:6] = 2'b00;
 
     wire [31:0] counter_value,
