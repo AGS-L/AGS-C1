@@ -39,7 +39,7 @@ There are two input pins that set the output of a uio output pin to 0, 1, and Z.
 
 ## How to test
 
-Program counter value, and duty cycle registers over SPI by sending the proper command byte followed by 4 bytes to set the value of the register. Then send the enable pwm command byte to start the SPI. Or use the override pins present on the ui_in.
+Program counter value, and duty cycle registers over SPI by sending the proper command byte followed by 4 bytes to set the value of the register. Then send the enable pwm command byte to start the SPI. Outputs 3 to 7 indicate that the registers value is non zero. Bidirectional output 0 shows if the enable register is non zero. Or use the override pins present on the ui_in to test just the PWM.
 
 
 ## External hardware
