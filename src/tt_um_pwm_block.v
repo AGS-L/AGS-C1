@@ -50,7 +50,7 @@ wire tx_dv;
           uio_in[7]        // active low
           );
   
-  MemoryManager MemCell(
+  RegisterFiles MemCell(
                     rst_n,    // Reset, active low
                     clk,      // Clock
 
