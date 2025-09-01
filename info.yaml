@@ -26,8 +26,8 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
+  ui[0]: "Sets Value of uio_out0"
+  ui[1]: "High Z on uio_out0 - 1 for Z"
   ui[2]: ""
   ui[3]: ""
   ui[4]: ""
@@ -46,7 +46,7 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
+  uio[0]: "High Z test Pin"
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
