@@ -87,7 +87,7 @@ module tt_um_pwm_block (
     assign uo_out[5] = (duty_cycle_1_out == 32'd0) ? 1'b0 : 1'b1;
     assign uo_out[6] = (duty_cycle_2_out == 32'd0) ? 1'b0 : 1'b1;
     assign uo_out[7] = (duty_cycle_3_out == 32'd0) ? 1'b0 : 1'b1;
-    assign uio_out[0] = (enable_pwm_out == 1'b0) ? 1'b0 : 1b'1;
+    assign uio_out[0] = (enable_pwm_out == 1'b0) ? 1'b0 : 1'b1;
     
     PWM    pwm_module(
         counter_value,
